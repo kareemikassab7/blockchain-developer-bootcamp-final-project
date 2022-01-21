@@ -1,7 +1,8 @@
-# Contract security measures
+# Contract Pitfall Protection Measures
 
 ## SWC-107 (Reentrancy)
-Implemented the Check-Effect-Interaction design pattern before I returned funds, donations, or profits.
+
+Implemented the Check-Effect-Interaction design pattern before I returned funds, donations, or profits (commented part). modified the state before sending funds in ClaimFunds function (not in front end)
 
 ## SWC-103 (Floating pragma)
 

@@ -14,7 +14,13 @@ interface Project{
     function Donate(uint _id) external payable;
 }
 
+
+/// @title The charity contract
+/// @notice Allows us to add campaigns, donate, and collect the raised funds
+/// @dev has 3 main functions named AddCampaign, Donate, and claimFunds
 contract Charity is Project, Ownable{
+    
+    /// @dev stores all campaign parameters that will be filled using AddCampagin and be accessed later
     struct Campaign {
         string name;
         uint donUnit;
@@ -31,20 +37,31 @@ contract Charity is Project, Ownable{
         string ImgUrl;*/
     }
     
+    /// @dev array of IDs of campaings that correspond to their campaign IDs as well
     uint[] public IDList;
-    mapping (uint => Campaign) public Campaigns;
-    uint public campaignCount= 0;
-// @notice Explain to an end user what this does
-/// @dev Explain to a developer any extra details
 
+    /// @dev mapping of campaign structs to their Ids
+    mapping (uint => Campaign) public Campaigns;
+
+    /// @dev integer counter that will be incremented once we add new campaings and used to assign them IDs
+    uint public campaignCount= 0;
+
+
+/// @notice Displays some campaign data after it is being added to make sure it was stored correctly
+/// @dev emitted when we call AddCampaign to emit the id, name, and the address of the one who added the campaign
 event logAddedCampaign(uint  id, string  CampaignName, address  Raiser);
+
+
+/// @notice Displays some info about a donation once it happended
+/// @dev emitted when we call Donate() to emit the address of donater, amount donated, and the Raised amount until now
 event logDonated(address donater, uint amt, uint Raised);
 
 
 /*
 modifiers
-*/    uint[] Test;
-///vlidate that the campaign is in an Ongoing state to accept donations
+*/    
+
+/// @dev vlidate that the campaign is in an Ongoing state to accept donations
 modifier isOngoing (uint id){
 require (Campaigns[id].state== State.Ongoing , "This Campaign has been closed");
     _;
@@ -54,7 +71,8 @@ require (Campaigns[id].state== State.Ongoing , "This Campaign has been closed");
 functions
 */
 
-/// @dev Explain to a developer any extra details
+/// @dev function that adds a new campaign to the mapping after taking the required parameters from the Raiser, uses owner() to eb the Raiser
+/// Note The commented lines can be used to extend code functionality
 
 function AddCampaign(string memory _name, string memory _description, uint _goal, uint _donUnit) public onlyOwner{
     //, uint _duration, string memory _InfoUrl, string memory _ImgUrl
@@ -72,8 +90,8 @@ function AddCampaign(string memory _name, string memory _description, uint _goal
     campaignCount+= 1;
 }
 
-/// @dev checks if the campaign's deadline hastn passed, checks that the sent amount is equal to the donated amount, increases the raised amount for the campaign.
-
+/// @dev checks that the raised amount isnt equal to the goal (closes campaign if it is), checks that the sent amount is equal to the donated amount, increases the raised amount for the campaign.
+    
     function  Donate (uint _id) external  payable override isOngoing(_id){
         require(msg.value== Campaigns[_id].donUnit);
         Campaigns[_id].RaisedAmt += msg.value;
@@ -85,7 +103,8 @@ function AddCampaign(string memory _name, string memory _description, uint _goal
         emit logDonated(msg.sender, msg.value, Campaigns[_id].RaisedAmt);
     }
 
-
+/// @notice allows us to get the raised funds to our account
+/// @dev checks that the claimer is the raiser, checks that the campaign is closed, then sends the raised funds.
 
     function  claimFunds (uint _id) external {
         require(msg.sender== Campaigns[_id].Raiser, "You don't have the right to claim the funds");
@@ -94,19 +113,18 @@ function AddCampaign(string memory _name, string memory _description, uint _goal
         payable(msg.sender).transfer(Campaigns[_id].RaisedAmt); ///transfer raised amt only
     }
 
+    /// @dev getter function for raised amount variable
     function getRaisedAmt(uint _id)  public view returns (uint) {
         return Campaigns[_id].RaisedAmt;
     }
 
-    function addNum(uint num) public {
-        Test.push(num);
-    }
-
-    function returnTest(uint num) view public returns (uint) {
+     /// @notice Explain to an end user what this does
+     /// @dev some getter functions i used in some testing
+     /*function returnTest(uint num) view public returns (uint) {
         return Test[num];
-    }
+    }*/
       
-    function retcount() public returns (uint){
+    function retcount() public view returns (uint){
         return campaignCount;
     }
     ///function getCampaign(uint id) public

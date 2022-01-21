@@ -27,8 +27,8 @@ contract("Charity", function (accounts) {
 
         /** add simple campaign */
     it ('should add a campaign', async ()=> {
-      result = await charity.AddCampaign("Salah", "Salah", web3.utils.toWei('0.000005', 'Ether'));
-      result2 = await charity.AddCampaign("Kareem", "Kareem", web3.utils.toWei('1', 'Ether'));
+      result = await charity.AddCampaign("Salah", "Salah", web3.utils.toWei('0.000005', 'Ether'),web3.utils.toWei('0.000001', 'Ether'));
+      result2 = await charity.AddCampaign("Kareem", "Kareem", web3.utils.toWei('1', 'Ether'),web3.utils.toWei('0.000001', 'Ether'));
       charity.events.logAddedCampaign();
       /*count= await charity.retcount()
       assert.equal(count.toNumber(), 0)
@@ -59,7 +59,7 @@ contract("Charity", function (accounts) {
     });
 
     it ('should fail and say the campaign is closed', async ()=> {
-      result3 = await charity.AddCampaign("Seba", "Seba", web3.utils.toWei('0.000001', 'Ether'));
+      result3 = await charity.AddCampaign("Seba", "Seba", web3.utils.toWei('0.000005', 'Ether'),web3.utils.toWei('0.000001', 'Ether'));
       const campaign = await charity.Campaigns(3);
       pay = await charity.Donate(3, {value:web3.utils.toWei('0.000001', 'Ether')}); 
       payAgain= await charity.Donate(3, {value:web3.utils.toWei('0.000001', 'Ether')}); 
