@@ -7,7 +7,7 @@
 <br>
 Kareem Kassab
 I am a Computer Engineering Student studying at the American University in Cairo.
-
+<br>
 public address to receive NFT: 
 0x250d3eF805d611B04eB51F4011c32D0453D3479A
 
@@ -70,7 +70,7 @@ React 17.0.2
 <br>
 All the testing is done on ganache port 7545
 <br>
-<b>Note: During the testing there are 3 tests that pass and 3 tests that fail. the tests that fail behave correctly as they add a campaign and is shown to be right by the event. the last test in the file is supposed to fail as the campaign gets closed when the raised amount is satisfied and it then tries to send again.
+Note: During the testing there are 3 tests that pass and 3 tests that fail. the tests that fail behave correctly as they add a campaign and is shown to be right by the event. the last test in the file is supposed to fail as the campaign gets closed when the raised amount is satisfied and it then tries to send again.
 
 ## Get ready to deploy
 after installations u need
@@ -89,7 +89,7 @@ $ truffle test
 
 3- IMPORTANT: if the truffle config didnt work while u deploy to a public network, just comment line 15, and uncomment lines 5 and 16. then, put your mnemonic phrase in the placeholder of line 5 "word1 word2 word3.... word12". then, put your infura endpoint ID instead of the placeholder PUT_YOUR_ID_HERE in line 16 (just find and replace). after this it should work.
 
-<b><CAUTION\b> this is not safe as it can let ur wallet be stolen. I did this because I'm short on time and wanted to solve the error quickly as the .env is not working for some reason. after you deploy and if you want to share make sure to remove your confidential info.
+<b><CAUTION<\b> this is not safe as it can let ur wallet be stolen. I did this because I'm short on time and wanted to solve the error quickly as the .env is not working for some reason. after you deploy and if you want to share make sure to remove your confidential info.
 
 4- for front end type:
 $ npm run start
