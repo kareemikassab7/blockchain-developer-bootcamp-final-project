@@ -27,7 +27,7 @@ ropsten deployed: https://youtu.be/zm-vKUzcSb8
 ## Directory Structure
 
 inside, there is the main directory, and a few other directories explained below:
-<b>Charity_CrowdFunding_Collection</b>
+##### 1.Charity_CrowdFunding_Collection
 <br>
 contains everything else in one package
 ##### 2.migrations
