@@ -25,9 +25,9 @@ ganache deployed + testing explanation: https://youtu.be/AzZapCeMz3E
 ropsten deployed: https://youtu.be/zm-vKUzcSb8
 
 ## Directory Structure
-<br>
+
 inside, there is the main directory, and a few other directories explained below:
-##### 1.Charity_CrowdFunding_Collection
+<b>Charity_CrowdFunding_Collection</b>
 <br>
 contains everything else in one package
 ##### 2.migrations
