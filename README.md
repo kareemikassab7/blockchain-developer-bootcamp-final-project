@@ -1,7 +1,9 @@
 #Charity and Crowdfunding collection Platform
 ----
 <br>
-###Author & Etheruem public Acc to get NFT Cert.
+
+## Author & Etheruem public Acc to get NFT Cert.
+
 <br>
 Kareem Kassab
 I am a Computer Engineering Student studying at the American University in Cairo.
@@ -64,11 +66,11 @@ Node v10.19.0
 Web3.js v1.5.3
 React 17.0.2
 
-##Testing
+## Testing
 <br>
 All the testing is done on ganache port 7545
 <br>
-<b>Note:<\b> During the testing there are 3 tests that pass and 3 tests that fail. the tests that fail behave correctly as they add a campaign and is shown to be right by the event. the last test in the file is supposed to fail as the campaign gets closed when the raised amount is satisfied and it then tries to send again.
+<b>Note: During the testing there are 3 tests that pass and 3 tests that fail. the tests that fail behave correctly as they add a campaign and is shown to be right by the event. the last test in the file is supposed to fail as the campaign gets closed when the raised amount is satisfied and it then tries to send again.
 
 ## Get ready to deploy
 after installations u need
@@ -78,7 +80,7 @@ add the following 2 lines after putting ur data instead of the 2 curly braces
 INFURAID= {your endpoint ID without quotes or any braces}
 MNEMONIC= {your wallet mnemonic in quotes}
 ----
-##How to Run
+## How to Run
 1- install all the programs above with the specified versions
 2- in the Charity_CrowdFunding_Collection directory open a terminal and run the following commands:
 $ truffle compile
