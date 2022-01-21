@@ -21,6 +21,7 @@ The front end is very simple: entry slots for the basic campaign data, a button 
 
 ## video walkthrough
 ganache deployed + testing explanation: https://youtu.be/AzZapCeMz3E
+<br>
 ropsten deployed: https://youtu.be/zm-vKUzcSb8
 
 
@@ -73,6 +74,7 @@ All the testing is done on ganache port 7545
 Note: During the testing there are 3 tests that pass and 3 tests that fail. the tests that fail behave correctly as they add a campaign and is shown to be right by the event. the last test in the file is supposed to fail as the campaign gets closed when the raised amount is satisfied and it then tries to send again.
 
 ## Get ready to deploy
+
 after installations u need
 - create a .env file (show hidden files to see it)
 add the following 2 lines after putting ur data instead of the 2 curly braces
@@ -80,6 +82,7 @@ add the following 2 lines after putting ur data instead of the 2 curly braces
 INFURAID= {your endpoint ID without quotes or any braces}
 MNEMONIC= {your wallet mnemonic in quotes}
 ----
+
 ## How to Run
 1- install all the programs above with the specified versions
 2- in the Charity_CrowdFunding_Collection directory open a terminal and run the following commands:
@@ -87,9 +90,9 @@ $ truffle compile
 $ truffle migrate                 you can change this one if ur migrating to another network
 $ truffle test
 
-3- IMPORTANT: if the truffle config didnt work while u deploy to a public network, just comment line 15, and uncomment lines 5 and 16. then, put your mnemonic phrase in the placeholder of line 5 "word1 word2 word3.... word12". then, put your infura endpoint ID instead of the placeholder PUT_YOUR_ID_HERE in line 16 (just find and replace). after this it should work.
+3- <b>IMPORTANT</b>: if the truffle config didnt work while u deploy to a public network, just comment line 15, and uncomment lines 5 and 16. then, put your mnemonic phrase in the placeholder of line 5 "word1 word2 word3.... word12". then, put your infura endpoint ID instead of the placeholder PUT_YOUR_ID_HERE in line 16 (just find and replace). after this it should work.
 
-<b><CAUTION</b> this is not safe as it can let ur wallet be stolen. I did this because I'm short on time and wanted to solve the error quickly as the .env is not working for some reason. after you deploy and if you want to share make sure to remove your confidential info.
+<b>CAUTION</b> this is not safe as it can let ur wallet be stolen. I did this because I'm short on time and wanted to solve the error quickly as the .env is not working for some reason. after you deploy and if you want to share make sure to remove your confidential info.
 
 4- for front end type:
 $ npm run start
