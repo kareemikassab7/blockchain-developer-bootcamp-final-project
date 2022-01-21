@@ -24,7 +24,6 @@ ganache deployed + testing explanation: https://youtu.be/AzZapCeMz3E
 <br>
 ropsten deployed: https://youtu.be/zm-vKUzcSb8
 
-
 ## Directory Structure
 <br>
 inside, there is the main directory, and a few other directories explained below:
