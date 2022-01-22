@@ -1,8 +1,8 @@
 {
-  "name": "eth-marketplace",
+  "name": "charity_platform",
   "version": "0.1.0",
-  "description": "An Ethereum Marketplace",
-  "author": "gregory@dappuniversity.com",
+  "description": "charity collection website for bootcamp 2021 consesnys",
+  "author": "Kareem Kassab",
   "dependencies": {
     "@truffle/hdwallet-provider": "^2.0.1",
     "babel-polyfill": "6.26.0",
