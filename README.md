@@ -11,6 +11,10 @@ I am a Computer Engineering Student studying at the American University in Cairo
 <b>public address to receive NFT:</b> 
 0x250d3eF805d611B04eB51F4011c32D0453D3479A
 
+## Delpoyed URL
+
+https://blockchain-developer-bootcamp-final-project-steel.vercel.app/
+
 ## Project Description
 <br>
 This is my project for the Consensys 2021 bootcamp. It is a charity and crowdfunding collection platform. The implemented part is used to add charity campagigns and collect donations for them in pre-defined donation units. the charity part can still be extended by giving the ability to withdraw collected funds by the front end (transfer them to the raiser address) but I didn't have time so I satisfied the requirement and am going to extend on it later. 
