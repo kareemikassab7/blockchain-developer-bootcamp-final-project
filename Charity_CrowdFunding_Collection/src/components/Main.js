@@ -81,10 +81,10 @@ class Main extends Component {
                   <td>{window.web3.utils.fromWei(campaign.RaisedAmt.toString(), 'Ether')} Eth</td>
                   <td>{window.web3.utils.fromWei(campaign.goal.toString(), 'Ether')} Eth</td>
                   <td>{window.web3.utils.fromWei(campaign.donUnit.toString(), 'Ether')} Eth</td>
-                  <td>{campaign.state ===0?"closed": "open"}</td>
+                  <td>{campaign.state ==0?"closed": "open"}</td>
                   <td>{campaign.owner}</td>
                   <td>
-                  { !campaign.state===0
+                  { !campaign.state==0
                     ?<button
                           name={campaign.id}
                           value={campaign.donUnit} //={(input) => { this.donUnit = input }}
