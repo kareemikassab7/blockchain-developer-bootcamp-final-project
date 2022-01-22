@@ -98,6 +98,7 @@ $ truffle test
 <b>CAUTION</b> this is not safe as it can let ur wallet be stolen. I did this because I'm short on time and wanted to solve the error quickly as the .env is not working for some reason. after you deploy and if you want to share make sure to remove your confidential info.
 
 4- for front end type:
+$ npm install
 $ npm run start
 
 then connect your metamask wallet and connect it to the ropsten network.
